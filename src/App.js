@@ -1,16 +1,15 @@
 import "./App.css";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Navigation from "./Navigation/Navigation";
-import { lazy, Suspense } from "react";
+// import { Switch, Route, Redirect } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation";
+// import { lazy, Suspense } from "react";
 import Container from "./components/Container/Container";
-import Spiner from "./Loader/Loader";
+// import Spiner from "./components/Loader/Loader";
 
 function App() {
   return (
-    <div className="App">
-      <Container>
-        <Navigation />
-        {/* <Suspense fallback={<Spiner />}>
+    <Container>
+      <Navigation />
+      {/* <Suspense fallback={<Spiner />}>
           <Switch>
             <Route path="/" exact>
               <HomeView />
@@ -27,8 +26,7 @@ function App() {
             <Redirect to="/" />
           </Switch>
         </Suspense> */}
-      </Container>
-    </div>
+    </Container>
   );
 }
 

@@ -2,7 +2,7 @@
 const BASE_URL = "https://api.themoviedb.org/3";
 const KEY = "f9dffaa96d626d54f210b5d00bfe3c02";
 
-async function api(url) {
+export async function api(url) {
   const response = await fetch(url);
   return console.log(response.ok)
     ? await response.json()

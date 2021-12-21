@@ -1,7 +1,7 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 
-import css from "../../App.module.css";
+import css from "../../App.css";
 
 const Spinner = () => {
   return (

@@ -1,10 +1,13 @@
-export default function HomeView() {
-  const [movies, setMovies] = useState([])
+import { useState, useEffect } from "react";
+import api from "../api";
 
-  useEffect (()=>{
-  api.().then(setMovies)
-  console.log(setMovies);
-  }, [])
+export default function HomeView() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    api().then(setMovies);
+    console.log(setMovies);
+  }, []);
 
   return (
     <>
