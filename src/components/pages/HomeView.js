@@ -13,7 +13,7 @@ export default function HomeView() {
     <>
       <h1>Trending Today</h1>
 
-      {/* {movies && <MoviesList movies={movies} />} */}
+      {movies && <MoviesList movies={movies} />}
     </>
   );
 }
