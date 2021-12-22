@@ -4,7 +4,7 @@ const KEY = "f9dffaa96d626d54f210b5d00bfe3c02";
 
 export async function api(url) {
   const response = await fetch(url);
-  return console.log(response.ok)
+  return response.ok
     ? await response.json()
     : Promise.reject(new Error("Not found"));
 }
