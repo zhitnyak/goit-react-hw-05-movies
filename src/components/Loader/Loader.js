@@ -1,11 +1,9 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 
-import css from "../../App.css";
-
 const Spinner = () => {
   return (
-    <div className={css.Spinner}>
+    <div>
       <Loader
         type="Oval"
         color="#DCB60E"
