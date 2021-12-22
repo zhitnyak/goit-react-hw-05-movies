@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import api from "../api";
+import { getTrending } from "../api";
+import MoviesList from "../MovieList/MovieList";
 
 export default function HomeView() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    api().then(setMovies);
+    getTrending().then(setMovies);
     console.log(setMovies);
   }, []);
 
