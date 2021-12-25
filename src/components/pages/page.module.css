@@ -1,0 +1,88 @@
+/* HomeView */
+.homePage {
+  padding-top: 15px;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.item {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+/* Cast */
+.castList {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.castName {
+  font-size: 12px;
+  text-align: center;
+}
+
+.itemWrapper {
+  margin: 0px 25px 10px 0px;
+}
+
+.defaultImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 135px;
+  height: 202px;
+}
+
+/* GoBackBtn */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 0.1px solid rgba 255, 255, 255, 0.5;
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  transition: 0.2s ease-in-out;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.671);
+  background-image: rgba(255, 255, 255, 0.5);
+}
+
+.btn:hover {
+  background: #aaaaaa;
+  color: #fff;
+}
+.btn:hover:before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
+}
+
+/* Reviews */
+.reviewList {
+  list-style: none;
+}
+
+.reviewContainer {
+  margin-top: 25px;
+}
+
+.reviewText {
+  margin: 0;
+}
+
+.reviewAuthor {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}

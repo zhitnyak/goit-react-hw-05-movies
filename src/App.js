@@ -4,10 +4,22 @@ import Navigation from "./components/Navigation/Navigation";
 import Container from "./components/Container/Container.js";
 import Spiner from "./components/Loader/Loader";
 import "./App.css";
-// import HomeView from "./components/pages/HomeView";
 
 const HomeView = lazy(() =>
   import("./components/pages/HomeView" /* webpackChunkName: "HomeView"*/)
+);
+const MovieDetailsPage = lazy(() =>
+  import(
+    "./components/pages/MovieDetailsPage" /* webpackChunkName: "MovieDetailsPage"*/
+  )
+);
+const MovieList = lazy(() =>
+  import("./components/MovieList/MovieList" /* webpackChunkName: "Movies"*/)
+);
+const NotFoundPage = lazy(() =>
+  import(
+    "./components/pages/NotFoundPage" /* webpackChunkName: "NotFoundPage"*/
+  )
 );
 
 function App() {
@@ -20,11 +32,16 @@ function App() {
             <HomeView />
           </Route>
           <Route path="/movies" exact>
-            {/* <MoviesView /> */}
+            <MovieList />
           </Route>
-          <Route path="/movies/:movieId">{/* <MovieDetailsView /> */}</Route>
+          <Route path="/movies/:slug">
+            <MovieDetailsPage />
+          </Route>
+          <Route>
+            <NotFoundPage />
+          </Route>
           <Redirect to="/" />
-        </Switch>
+        </Switch>{" "}
       </Suspense>
     </Container>
   );
