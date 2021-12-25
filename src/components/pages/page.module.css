@@ -47,6 +47,9 @@
   overflow: hidden;
   border: 0.1px solid rgba 255, 255, 255, 0.5;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
   color: #000000;
   transition: 0.2s ease-in-out;
   padding: 5px 10px;
@@ -60,10 +63,6 @@
 .btn:hover {
   background: #aaaaaa;
   color: #fff;
-}
-.btn:hover:before {
-  left: 150px;
-  transition: 0.5s ease-in-out;
 }
 
 /* Reviews */
@@ -86,3 +85,66 @@
   font-weight: 700;
   font-size: 16px;
 }
+
+/* MovieDetailPage */
+.page {
+  padding-top: 25px;
+}
+
+.header {
+  margin-bottom: 15px;
+}
+
+.img {
+  width: 250px;
+  min-height: 150px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.genres {
+  display: flex;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.genresItem {
+  margin-left: 5px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 0.1px solid rgba 255, 255, 255, 0.5;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  transition: 0.2s ease-in-out;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.671);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.link:hover {
+  /* background: #aaaaaa; */
+  color: #000;
+}
+
+.activeLink {
+  background: #aaaaaa;
+  color: #fff;
+}
+/* .activeLink:hover {
+  color: #fff;
+} */
