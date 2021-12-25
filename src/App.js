@@ -1,34 +1,32 @@
-import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Navigation from "./components/Navigation/Navigation";
 import { lazy, Suspense } from "react";
-import Container from "./components/Container/Container";
+import Navigation from "./components/Navigation/Navigation";
+import Container from "./components/Container/Container.js";
 import Spiner from "./components/Loader/Loader";
+import "./App.css";
 // import HomeView from "./components/pages/HomeView";
+
+const HomeView = lazy(() =>
+  import("./components/pages/HomeView" /* webpackChunkName: "HomeView"*/)
+);
 
 function App() {
   return (
     <Container>
       <Navigation />
       <Suspense fallback={<Spiner />}>
-        {/* <Switch>
+        <Switch>
           <Route path="/" exact>
             <HomeView />
           </Route>
-
-          <Route path="/movies">
-            <MovieView />
+          <Route path="/movies" exact>
+            {/* <MoviesView /> */}
           </Route>
-
-          <Route path="/movies/:movieId" exact>
-            <MovieDetailsView />
-          </Route>
-
+          <Route path="/movies/:movieId">{/* <MovieDetailsView /> */}</Route>
           <Redirect to="/" />
-        </Switch> */}
+        </Switch>
       </Suspense>
     </Container>
   );
 }
-
 export default App;
