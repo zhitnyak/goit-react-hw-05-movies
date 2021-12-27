@@ -8,7 +8,7 @@ import { getMovieDetails } from "../api";
 import s from "./page.module.css";
 import Cast from "./Cast";
 import Reviews from "./Reviews";
-import GoBackBtn from "./GoBackBtn";
+import GoBackBtn from "../GoBackBtn/GoBackBtn";
 
 export default function MovieDetailsPage() {
   const { slug } = useParams();
